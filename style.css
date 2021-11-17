@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+}
+main {
+    margin: 100px;
+}
+.pierre {
+    background-image: url('pierre.png')
+}
+.feuille {
+    background-image: url('feuille.png');
+}
+.ciseaux {
+    background-image: url('ciseaux.png');
+    transform: rotate(-45deg);
+}
+.pierre, .feuille, .ciseaux {
+    background-size: cover;
+    width: 130px;
+    height: 150px;
+    background-color: black;
+    border: none;
+    margin: 50px;
+}
+.pierre:hover, .feuille:hover, .ciseaux:hover {
+    animation: 1s anim infinite linear;
+}
+@keyframes anim {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(20deg)}
+    100% {transform: rotate(-20deg)}
+}
